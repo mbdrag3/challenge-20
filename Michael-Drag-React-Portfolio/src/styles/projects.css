@@ -1,0 +1,46 @@
+.projects-container {
+    padding: 2rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+.card {
+    background-color: #f8f9fa; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    width: 300px; 
+    margin: 1rem; 
+    overflow: hidden; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+.card img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px
+}
+
+.card-links {
+    padding: 1rem 0; 
+}
+
+.card-links a {
+    margin: 0 1rem; 
+    text-decoration: none; 
+    color: #282c34; 
+    transition: color 0.3s; 
+}
+
+.card-links a:hover .icon {
+    color: #98FF98; 
+}
+
+.icon {
+    font-size: 1.5rem; 
+}
+

@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contact-page {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.contact-page::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/x0Qr7W7.webp");
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.form-header{
+    color: white
+}
+
+.wrapper{
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ffffff80;
+    backdrop-filter: blur(8px);
+    
+}
+
+.form {
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+}
+  
+.form input {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+}
+
+.input-field input {
+    width: 100%;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    width: 100%
+}
+
+.error-container {
+    min-height: 3rem;
+}
+
+.error-text {
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+.error-text:empty {
+    visibility: hidden; 
+}
+
+.error-text:not(:empty) {
+    visibility: visible;
+}
+
+.about-me-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about-me-img {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-me-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.about-me-text {
+    flex: 2;
+    max-width: 500px;
+}
+
+
+
+  
