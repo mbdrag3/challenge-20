@@ -7,7 +7,7 @@ function Home() {
     const [loopNum, setLoopNum] = useState(0);
     const [typingSpeed, setTypingSpeed] = useState(150);
 
-    const words = ["a Front End Developer", "a Back End Devloper", "a Creator", "a Music Lover"];
+    const words = ["a Front End Developer", "a Back End Developer", "a Creator", "a Music Lover"];
 
     useEffect(() => {
         const handleTyping = () => {
