@@ -1,0 +1,19 @@
+.home-container {
+    position: relative; 
+    padding: 20px;
+    width: 75%;
+    box-sizing: border-box;
+}
+
+.cursor {
+    font-weight: bold;
+    color: #333;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+

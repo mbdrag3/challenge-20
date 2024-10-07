@@ -1,0 +1,170 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400&family=Nunito+Sans:wght@700&display=swap');
+
+/* Apply Nunito Sans to h1 and h2 */
+/* h1, h2 {
+    font-family: 'Nunito Sans', sans-serif;
+} */
+
+.resume h1, .resume h2 {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Apply Catamaran to the rest of the page */
+/* body, p, ul, li, h3, div {
+    font-family: 'Catamaran', sans-serif;
+} */
+
+/* Scoped styles within .resume */
+.resume p, .resume h3, .resume div, .resume ul, .resume li {
+    font-family: 'Catamaran', sans-serif;
+}
+
+
+.resume {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    padding-top: 4rem;
+}
+
+.resume-left, .resume-right {
+    padding: 20px;
+}
+
+.resume-left {
+    flex: 1;
+    max-width: 300px;  /* Fixed width for left column */
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.resume-right {
+    flex: 2;
+    padding: 20px;
+    max-width: calc(100% - 320px); /* Adjust width to fill the rest */
+}
+
+.resume h1, .resume h2, .resume h3 {
+    margin: 0 0 10px 0;
+}
+
+.resume h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.resume h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.resume h3 {
+    font-size: 1.4em;
+    color: #666;
+}
+
+.resume p {
+    margin: 5px 0;
+}
+
+.resume ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.resume ul li {
+    margin-bottom: 10px;
+}
+
+/* Objective styling */
+.objective p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    padding-bottom: 25px;
+}
+
+/* Contact section */
+.resume-left ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-left ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Skills and Certifications */
+.skills ul, .certifications ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills ul li, .certifications ul li {
+    margin-bottom: 10px;
+}
+
+/* Experience and Education Entries */
+.experience-entry, .education-entry {
+    margin-bottom: 30px;
+}
+
+.experience-entry h3, .education-entry h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.experience-entry p, .education-entry p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Footer for Resume Download */
+.resume-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 8rem
+}
+
+.resume-footer h1 {
+    font-size: 1.5em;
+}
+
+.resume-footer button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.resume-footer button:hover {
+    background-color: #555;
+}
+
+.experience li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience ul ul li {
+    list-style-type: disc; /* Ensures bullets are still visible for the inner responsibilities */
+    padding-left: 20px; /* Add indentation for the inner list */
+}
+
+.experience-li {
+    border-bottom: 1px solid #D3D3D3;
+    padding-bottom: 25px;
+}
+
+.responsibilities-li {
+    text-align: left;
+}

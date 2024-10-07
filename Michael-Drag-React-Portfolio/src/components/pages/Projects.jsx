@@ -9,6 +9,7 @@ import noteTakerIMG from '../../assets/note-taker-app.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import aedventuresMap from '../../assets/aedventures-map.png'
 
 function Projects() {
     const projectData = [
@@ -59,6 +60,14 @@ function Projects() {
             websiteLink: '',
             title: 'Note taker app',
             description: 'A note taker application that will keep you more organized!'
+        },
+        {
+            id: 7,
+            image: aedventuresMap,
+            githubLink: 'https://github.com/mbdrag3/aedventures-map',
+            websiteLink: 'https://mbdrag3.github.io/aedventures-map/',
+            title: 'Sales map',
+            description: 'Integrated a map API in order to display sales across the state of Ohio.'
         }
     ];
 
@@ -68,9 +77,13 @@ function Projects() {
             <div className='cards'>
                 {projectData.map(project => (
                     <div className='card' key={project.id}>
-                        <img src={project.image} alt={project.title} />
-                        <h3>{project.title}</h3>
-                        <p>{project.description}</p>
+                        <div className='card-background'>
+                            <img src={project.image} alt={project.title} />
+                        </div>
+                        <div className='card-content'>
+                            <h3>{project.title}</h3>
+                            <p>{project.description}</p>
+                        </div>
                         <div className='card-links'>
                             {/* GitHub Link */}
                             <a href={project.githubLink} target="_blank" rel="noopener noreferrer">

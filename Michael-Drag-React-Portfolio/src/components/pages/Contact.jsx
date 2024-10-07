@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import '../../styles/style.css';
-
 import { validateEmail } from '../../utils/helpers';
 
 function Contact() {
@@ -9,6 +8,9 @@ function Contact() {
     const [userName, setUserName] = useState('');
     const [message, setMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false); // Modal visibility
+    const [modalUserName, setModalUserName] = useState(''); // New state variable
+
 
     const handleInputChange = (e) => {
     
@@ -51,10 +53,17 @@ function Contact() {
         //   return;
 
         // }
-        alert(`Hello ${userName}`);
+        setModalUserName(userName);
+        setIsModalOpen(true);
+
+        // Reset form fields
         setUserName('');
         setMessage('');
         setEmail('');
+      };
+
+      const closeModal = () => {
+        setIsModalOpen(false);
       };
 
     return (
@@ -98,6 +107,16 @@ function Contact() {
             </div>
           )}
           </form>
+          {/* Modal */}
+          {isModalOpen && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <h2>Hello {modalUserName || "Stranger"}!</h2>
+                        <p>Your message has been received.</p>
+                        <button onClick={closeModal}>Close</button>
+                    </div>
+                </div>
+            )}
         </div>
       );
 }

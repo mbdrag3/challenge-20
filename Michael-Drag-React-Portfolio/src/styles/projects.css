@@ -1,46 +1,63 @@
 .projects-container {
-    padding: 2rem;
+    padding: 2rem; /* Add padding around the projects container */
+    position: relative; /* Set the container as a relative position for internal positioning */
 }
 
 .cards {
-    display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap; 
+    display: flex; /* Use flexbox to lay out the cards */
+    justify-content: space-around; /* Distribute cards evenly with space between them */
+    flex-wrap: wrap; /* Allow cards to wrap onto multiple lines if necessary */
+    gap: 1rem; /* Add gap between cards */
 }
 
 .card {
-    background-color: #f8f9fa; 
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    width: 300px; 
-    margin: 1rem; 
-    overflow: hidden; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
+    background-color: #f8f9fa; /* Set a light background color for the card */
+    border: 1px solid #ccc; /* Add a light gray border around the card */
+    border-radius: 8px; /* Round the corners of the card */
+    width: 300px; /* Set a fixed width for each card */
+    margin: 1rem; /* Add margin around each card */
+    overflow: hidden; /* Hide any content that overflows outside the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for a raised effect */
+    text-align: center; /* Center the text inside the card */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smoothly transition scale and blur effects */
+    position: relative; /* Set position to relative for z-index management */
+    z-index: 1; /* Set default z-index so the card is at the same level as others */
 }
 
 .card img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px
+    width: 100%; /* Ensure the image takes the full width of the card */
+    height: auto; /* Adjust the image height automatically to maintain aspect ratio */
+    border-radius: 8px; /* Round the corners of the image */
 }
 
 .card-links {
-    padding: 1rem 0; 
+    padding: 1rem 0; /* Add padding above and below the card links */
 }
 
 .card-links a {
-    margin: 0 1rem; 
-    text-decoration: none; 
-    color: #282c34; 
-    transition: color 0.3s; 
+    margin: 0 1rem; /* Add horizontal space between the links */
+    text-decoration: none; /* Remove the underline from the links */
+    color: #282c34; /* Set the link text color to dark gray */
+    transition: color 0.3s; /* Smooth transition effect when changing link color */
 }
 
 .card-links a:hover .icon {
-    color: #98FF98; 
+    color: #98FF98; /* Change the icon color to light green on hover */
 }
 
 .icon {
-    font-size: 1.5rem; 
+    font-size: 1.5rem; /* Set the size of the icons */
 }
 
+/* Hover effect for the active card */
+.card:hover {
+    transform: scale(1.1); /* Slight zoom on hover to focus on the card */
+    z-index: 2; /* Bring the hovered card to the front of others */
+}
+
+/* Blurring the other cards */
+.cards:hover .card:not(:hover) {
+    filter: blur(5px); /* Apply a blur effect to non-hovered cards */
+    transform: scale(1); /* Ensure non-hovered cards remain at their original size */
+    z-index: 0; /* Push non-hovered cards to the background */
+}
